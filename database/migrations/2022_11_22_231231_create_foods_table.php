@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->id();         // definiert welche wie viele Felder der Table haben soll (zeichenbegrenzung)
             $table->string('name',255);
             $table->text('detail');
             $table->timestamps();
