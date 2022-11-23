@@ -13,7 +13,7 @@ class FoodController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { $foods = Food::latest()->paginate(5);
+    { $foods = Food::all();
 
         return view('foods.index',compact('foods'))
         ->with('i', (request()->input('page',1)-1) *5);
@@ -105,4 +105,3 @@ class FoodController extends Controller
                            ->with('success','Lebensmittel wurde gelöscht.');
     }
 }
-

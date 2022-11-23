@@ -30,9 +30,9 @@
             <td>{{ $food->name }}</td>
             <td>{{ $food->detail }}</td>
             <td>
-                <form action="{{ route('foods.destroy',$foods->id) }}" method="POST">
+                <form action="{{ route('foods.destroy',$food->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('foods.show',$foods->id) }}">Anzeigen</a>
+                    <a class="btn btn-info" href="{{ route('foods.show',$food->id) }}">Anzeigen</a>
     
                     <a class="btn btn-primary" href="{{ route('foods.edit',$food->id) }}">Bearbeiten</a>
    
@@ -46,6 +46,6 @@
         @endforeach
     </table>
   
-    {!! $foods->links() !!}
+    {{-- {!! $foods->links() !!} --}}
       
 @endsection

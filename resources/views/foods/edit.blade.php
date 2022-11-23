@@ -7,7 +7,7 @@
                 <h2>Lebensmittel bearbeiten</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> Zurück</a>
+                <a class="btn btn-primary" href="{{ route('foods.index') }}"> Zurück</a>
             </div>
         </div>
     </div>
