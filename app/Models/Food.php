@@ -10,9 +10,8 @@ class Food extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name','detail'
-        
+    'name','detail','userID'
+    
     ];
 
 }
-
