@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('foods', function (Blueprint $table) {
             $table->id();         // definiert welche wie viele Felder der Table haben soll (zeichenbegrenzung)
-            $table->string('name',255);
+            $table->string('name');
             $table->text('detail');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('foods');
     }
 };
