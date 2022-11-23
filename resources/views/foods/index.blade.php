@@ -19,10 +19,10 @@
    
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Details</th>
-            <th width="280px">Action</th>
+            <th>Nummer</th>
+            <th>Name des Lebensmittel</th>
+            <th>Weitere Details</th>
+            <th width="280px">Verwalten</th>
         </tr>
         @foreach ($foods as $food)
         <tr>
