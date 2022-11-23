@@ -7,7 +7,7 @@
             <h2>Neues Lebensmittel hinzufügen</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('foods.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('foods.index') }}"> Zurück</a>
         </div>
     </div>
 </div>
