@@ -3,11 +3,13 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
+        <br/>
         <div class="pull-left">
             <h2>Neues Lebensmittel hinzufügen</h2>
+            <br/>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('foods.index') }}"> Zurück</a>          <!-- Zurück Button, der wieder zu der Hauptseite "Foods" geführt wird -->
+            <a class="btn btn-primary" href="{{ route('foods.index') }}"> Zurück</a>      <!-- Zurück Button, der wieder zu der Hauptseite "Foods" geführt wird -->
         </div>
     </div>
 </div>
@@ -31,14 +33,17 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <br/>
                 <strong>Name:</strong>
                 <input type="text" name="name" class="form-control" placeholder="Name">
+                <br/>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Detail:</strong>                                                        <!-- HTML Code für die Felder von Details-->
+                <strong>Details:</strong>                                                        <!-- HTML Code für die Felder von Details-->
                 <textarea class="form-control" style="height:150px" name="detail" placeholder="Details"></textarea>
+                <br/>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
