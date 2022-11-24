@@ -3,12 +3,17 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
+            <br/>
+                
             <div class="pull-left">
                 <h2>Dein Lebensmittel</h2>
+                <br/>
+                
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('foods.index') }}"> Zurück</a>
             </div>
+            <br/>
         </div>
     </div>
    
