@@ -1,9 +1,13 @@
 @extends('foods.layout')
+
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Virtueller Kühlschrank</h2>
+           <h2>Virtueller Kühlschrank</h2> 
+                   
+               
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('foods.create') }}"> Neues Lebensmittel hinzufügen </a>
@@ -22,7 +26,8 @@
             <th>Nummer</th>
             <th>Name des Lebensmittel</th>
             <th>Weitere Details</th>
-            <th width="280px">Verwalten</th>
+            <th width="400px">Verwalten</th>
+            
         </tr>
         @foreach ($foods as $food)
         <tr>
@@ -30,7 +35,7 @@
             <td>{{ $food->name }}</td>
             <td>{{ $food->detail }}</td>
             <td>
-                <form action="{{ route('foods.destroy',$food->id) }}" method="POST">
+                <form action="{{ route('foods.destroy',$food->id) }}" method="POST">          <!-- hier wird eine neue Ressource erstellt, zum Löschen-->
    
                     <a class="btn btn-info" href="{{ route('foods.show',$food->id) }}">Anzeigen</a>
     

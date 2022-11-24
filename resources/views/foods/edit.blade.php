@@ -1,5 +1,5 @@
 @extends('foods.layout')
-   
+<!-- die edit.blade erbt ebenfalls von der Food.Layout. Die Edit.Blade ist eine Verknüpfung. Hier wird der Bereich der Seite definiert--> 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -14,8 +14,8 @@
    
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> Es gab ein Problem mit deiner Eingabe.<br><br>
-            <ul>
+            <strong>Whoops!</strong> Es gab ein Problem mit deiner Eingabe.<br><br>        
+            <ul>  <!--hier kommt ebenfalls eine Fehlermeldung, sobald z.B auf den Button geclickt wird, ohne das etwas in de Felder eingegeben wurde-->
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
@@ -36,7 +36,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detail:</strong>
+                    <strong >Details:</strong>
                     <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $food->detail }}</textarea>
                 </div>
             </div>

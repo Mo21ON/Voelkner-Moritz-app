@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FoodController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 
      *
      * @return \Illuminate\Http\Response
      */
@@ -21,7 +21,7 @@ class FoodController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * 
      *
      * @return \Illuminate\Http\Response
      */
@@ -31,7 +31,7 @@ class FoodController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -40,7 +40,7 @@ class FoodController extends Controller
     {
         $request->validate ([
             'name' => 'required',
-            'detail' => 'required',
+            'detail' => 'required',                                    // hier wird eine Ressource angelegt, der Returnwert ist in diesem Fall die Meldung, dass die neue Resource erfolgreich angelegt wurde
         ]);
     
         Food::create($request->all());
@@ -50,7 +50,7 @@ class FoodController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * 
      *
      * @param  \App\Models\Food  $food
      * @return \Illuminate\Http\Response
@@ -61,18 +61,18 @@ class FoodController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * 
      *
      * @param  \App\Models\Food  $food
      * @return \Illuminate\Http\Response
      */
-    public function edit(Food $food)
+    public function edit(Food $food)                                              
     {
         return view('foods.edit', compact('food'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * 
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Food  $food
@@ -81,7 +81,7 @@ class FoodController extends Controller
     public function update(Request $request, Food $food)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => 'required',                               // bei Nicht-Eingabe der Felder, wird hier mit der Variable Request angefordert, dass die Felder erforderlich sind. Sonst erscheint eine Fehlermeldung
             'detail' => 'required',
         ]);
 
@@ -92,16 +92,16 @@ class FoodController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     *
      *
      * @param  \App\Models\Food  $food
      * @return \Illuminate\Http\Response
      */
     public function destroy(Food $food)
     {
-        $food->delete();
+        $food->delete();                                                                 // hier wird die Funktion "destroy" ausgeführt, welche letzendlich die EIngabe löscht. Als Returnwert erhält man den Text. 
 
         return redirect()->route('foods.index')
-                           ->with('success','Lebensmittel wurde gelöscht.');
+                           ->with('success','Lebensmittel wurde entnommen.');
     }
 }
