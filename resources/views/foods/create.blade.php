@@ -28,7 +28,8 @@
                                                                                  
 <form action="{{ route('foods.store') }}" method="POST">    <!-- Die Store-Funktion wird hier aufgeruft und per POST Methode wird der Eintrag in der Datenbank abgelegt-->
     @csrf <!-- hiermit wird ein verstecktes INput feld eingebaut, das verhindert das mehrere Input Felder mehrfach verwendet werden können--> 
-    <!-- hierbei handelt es sich um eine Laravel Funktion-->
+    <!-- hierbei handelt es sich um eine Laravel Funktion-->   
+    <!-- Quelle: https://www.youtube.com/watch?v=ZGVhSAW2NYw&t=601s -->
   
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
