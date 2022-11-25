@@ -1,6 +1,7 @@
 @extends('foods.layout')
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!--Einbinden von Jquery für das JavaScript, Funktion des Buttons usw. -->
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
