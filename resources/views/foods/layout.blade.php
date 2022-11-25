@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <title>Virtueller Kühlschrank</title>
+    <title style=>Virtueller Kühlschrank</title>
     
 </head>
 <body>
+    
     <x-app-layout>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Youre logged in!') }}                 
+                {{ __('Du bist eingeloggt!') }}                 
             </h2>
            
         </x-slot>
