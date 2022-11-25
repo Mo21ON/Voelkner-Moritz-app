@@ -60,11 +60,11 @@
         @endforeach
     </table>
 
-    <div class="col-lg-4 margin-tb mt-5">
-        <a class="btn btn-warning" id="trigger-ajax" >Trigger Ajax</a>
+    <div class="col-lg-4 margin-tb mt-5">                                                                  <!-- Die ID "trigger-ajax" wird hier vergeben und unten im JS aufgerufen, diese führt dann das Click Event aus-->
+        <a class="btn btn-warning" id="trigger-ajax" >Lebensmittel zählen</a>
     </div>
     <div class="col-lg-4 margin-tb mt-5">
-        <p>The Ajax Result is:</p>
+        <p>Anzahl Lebensmittel im Kühlschrank:</p>
         <p id="ajax-result"></p>
     </div>
   
@@ -72,8 +72,8 @@
 
     <script>
         $("#trigger-ajax").click(function(){
-            $.ajax({url: "{{ route('counter') }}",
-                success: function(result){
+            $.ajax({url: "{{ route('counter') }}",                           //Ajax Zhäler, das InlineJavascript  definiert hier das Ajax, als Zähler
+                success: function(result){                                   // 
                     $("#ajax-result").html(result);
                 }, 
             
