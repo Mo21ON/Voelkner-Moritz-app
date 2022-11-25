@@ -10,6 +10,6 @@ class AjaxController extends Controller
 {
     public function counter()
     {
-        return Food::all()->count();
+        return Food::all()->count();             
     }
 }
