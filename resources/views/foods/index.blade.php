@@ -54,7 +54,7 @@
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">Löschen</button>
+                    <button type="submit" class="btn btn-danger">Entfernen</button>
                 </form>
             </td>
         </tr>
@@ -63,6 +63,7 @@
 
     <div class="col-lg-4 margin-tb mt-5">                                                                  <!-- Die ID "trigger-ajax" wird hier vergeben und unten im JS aufgerufen, diese führt dann das Click Event aus-->
         <a class="btn btn-warning" id="trigger-ajax" >Lebensmittel zählen</a>
+        
     </div>
     <div class="col-lg-4 margin-tb mt-5">
         <p>Anzahl Lebensmittel im Kühlschrank:</p>
@@ -74,7 +75,7 @@
     <script>
         $("#trigger-ajax").click(function(){
             $.ajax({url: "{{ route('counter') }}",                           //Ajax Zhäler, das InlineJavascript  definiert hier das Ajax, als Zähler
-                success: function(result){                                   // 
+                success: function(result){                                   // die ID "trigger Ajax" wird aufgerufen und die Funktion click wird ausgelöst
                     $("#ajax-result").html(result);
                 }, 
             
