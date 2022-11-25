@@ -13,11 +13,11 @@ class FoodController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { $foods = Food::all();
+    {
+        $foods = Food::all();
 
-        return view('foods.index',compact('foods'))
-        ->with('i', (request()->input('page',1)-1) *5);
-        
+        return view('foods.index', compact('foods'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -38,15 +38,15 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate ([
+        $request->validate([
             'name' => 'required',
             'detail' => 'required',                                    // hier wird eine Ressource angelegt, der Returnwert ist in diesem Fall die Meldung, dass die neue Resource erfolgreich angelegt wurde
         ]);
-    
+
         Food::create($request->all());
 
-        return redirect() ->route('foods.index')
-                        ->with('success', 'Lebensmittel erfolgreich eingefügt!');
+        return redirect()->route('foods.index')
+            ->with('success', 'Lebensmittel erfolgreich eingefügt!');
     }
 
     /**
@@ -57,7 +57,7 @@ class FoodController extends Controller
      */
     public function show(Food $food)
     {
-        return view('foods.show',compact('food'));
+        return view('foods.show', compact('food'));
     }
 
     /**
@@ -66,7 +66,7 @@ class FoodController extends Controller
      * @param  \App\Models\Food  $food
      * @return \Illuminate\Http\Response
      */
-    public function edit(Food $food)                                              
+    public function edit(Food $food)
     {
         return view('foods.edit', compact('food'));
     }
@@ -88,7 +88,7 @@ class FoodController extends Controller
         $food->update($request->all());
 
         return redirect()->route('foods.index')
-                         ->with('success','Lebensmittel erfolgreich aktualisiert!');
+            ->with('success', 'Lebensmittel erfolgreich aktualisiert!');
     }
 
     /**
@@ -102,6 +102,6 @@ class FoodController extends Controller
         $food->delete();                                                                 // hier wird die Funktion "destroy" ausgeführt, welche letzendlich die EIngabe löscht. Als Returnwert erhält man den Text. 
 
         return redirect()->route('foods.index')
-                           ->with('success','Lebensmittel wurde entnommen.');
+            ->with('success', 'Lebensmittel wurde entnommen.');
     }
 }

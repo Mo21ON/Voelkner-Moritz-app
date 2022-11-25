@@ -22,10 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/counter', [AjaxController::class, 'Counter'])->name("counter");      // Ajax 
- 
-   
+
+
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::resource('foods', FoodController::class);

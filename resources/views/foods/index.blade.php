@@ -41,13 +41,10 @@
                 <td>
                     <form action="{{ route('foods.destroy', $food->id) }}" method="POST">
                         <!-- hier wird eine neue Ressource erstellt, zum Löschen-->
-
                         <a class="btn btn-info" href="{{ route('foods.show', $food->id) }}">Anzeigen</a>
-
                         <a class="btn btn-primary" href="{{ route('foods.edit', $food->id) }}">Bearbeiten</a>
                         @csrf
                         @method('DELETE')
-
                         <button type="submit" class="btn btn-danger">Entfernen</button>
                     </form>
                 </td>
