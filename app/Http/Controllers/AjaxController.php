@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Food;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
 class AjaxController extends Controller
 {
-    public function testAjax()
+    public function counter()
     {
-        return "Ajax was successful";
+        return Food::all()->count();
+
+        
     }
 }
 

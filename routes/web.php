@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/test-ajax', [AjaxController::class, 'testAjax'])->name("test-ajax");      // Ajax 
+    Route::get('/counter', [AjaxController::class, 'Counter'])->name("counter");      // Ajax 
  
    
 });

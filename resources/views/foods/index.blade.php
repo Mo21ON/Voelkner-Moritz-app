@@ -47,6 +47,8 @@
                     <a class="btn btn-info" href="{{ route('foods.show',$food->id) }}">Anzeigen</a>
     
                     <a class="btn btn-primary" href="{{ route('foods.edit',$food->id) }}">Bearbeiten</a>
+
+                   
    
                     @csrf
                     @method('DELETE')
@@ -57,10 +59,31 @@
         </tr>
         @endforeach
     </table>
+
+    <div class="col-lg-4 margin-tb mt-5">
+        <a class="btn btn-warning" id="trigger-ajax" >Trigger Ajax</a>
+    </div>
+    <div class="col-lg-4 margin-tb mt-5">
+        <p>The Ajax Result is:</p>
+        <p id="ajax-result"></p>
+    </div>
   
     {{-- {!! $foods->links() !!} --}}
-   
+
+    <script>
+        $("#trigger-ajax").click(function(){
+            $.ajax({url: "{{ route('counter') }}",
+                success: function(result){
+                    $("#ajax-result").html(result);
+                }, 
+            
+            });
+        });
+    </script>
+
 @endsection
+
+
 
        
 
