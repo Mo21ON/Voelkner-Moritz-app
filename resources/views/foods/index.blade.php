@@ -28,7 +28,7 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>Nummer</th>
+            <th>Reihenfolge</th>
             <th>Name des Lebensmittel</th>
             <th>Weitere Details</th>
             <th width="400px">Verwalten</th>
@@ -62,7 +62,7 @@
 
     {{-- {!! $foods->links() !!} --}}
 
-    <script>
+   <script>
         $("#trigger-ajax").click(function() {
             $.ajax({
                 url: "{{ route('counter') }}", //Ajax Zhäler, das InlineJavascript  definiert hier das Ajax, als Zähler
@@ -75,4 +75,5 @@
             });
         });
     </script>
+
 @endsection

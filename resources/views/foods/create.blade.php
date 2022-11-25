@@ -15,7 +15,6 @@
         </div>
     </div>
 
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Huch!</strong> Es gab ein Problem mit deiner Eingabe.<br><br>
@@ -33,8 +32,7 @@
         @csrf
         <!-- hiermit wird ein verstecktes INput feld eingebaut, das verhindert das mehrere Input Felder mehrfach verwendet werden können-->
         <!-- hierbei handelt es sich um eine Laravel Funktion-->
-        <!-- Quelle: https://www.youtube.com/watch?v=ZGVhSAW2NYw&t=601s -->
-
+        <!-- Quelle (um zu wissen worum es sich bei dem Token handelt): https://www.youtube.com/watch?v=ZGVhSAW2NYw&t=601s -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -55,7 +53,6 @@
                 <button type="submit" class="btn btn-primary">Bestätigen</button>
             </div>
         </div>
-
 
     </form>
 @endsection

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!-- Die Layout.Blade setzt die Struktur bzw. das aussehen der anderen Blades fest.-->
 <head>
     <title style=>Virtueller Kühlschrank</title>
 </head>
