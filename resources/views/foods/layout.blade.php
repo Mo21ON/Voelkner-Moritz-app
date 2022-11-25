@@ -3,8 +3,11 @@
 
 <head>
     <title style=>Virtueller Kühlschrank</title>
+   
     
 </head>
+
+
 <body>
     
     <x-app-layout>
@@ -28,7 +31,10 @@
             </div>
         </div>
     </x-app-layout> 
+
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 
 
     

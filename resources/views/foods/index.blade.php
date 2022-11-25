@@ -1,6 +1,6 @@
 @extends('foods.layout')
 
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -12,8 +12,10 @@
                 <br/>     
                
             </div>
+    
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('foods.create') }}"> Neues Lebensmittel hinzufügen </a>
+                <a id="addfood" class="btn btn-success" href="{{ route('foods.create') }}"> Neues Lebensmittel hinzufügen </a>
+                
                 <br/>
                 <br/>
             </div>
@@ -57,5 +59,9 @@
     </table>
   
     {{-- {!! $foods->links() !!} --}}
-      
+   
 @endsection
+
+       
+
+   
