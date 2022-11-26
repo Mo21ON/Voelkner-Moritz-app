@@ -13,7 +13,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return redirect('foods');
+    return redirect('foods');                             // wie aus diesem Code entommen werden kann, kommt man nachdem Registrieren zur "Startseite"
+                                                           //per redirect wird hier auf die Food Seite verlinkt 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,3 +30,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 Route::resource('foods', FoodController::class);
+
+// die web.php definiert die gesamten Routen, sowie welche Seite sich zu beginn öffnet. 

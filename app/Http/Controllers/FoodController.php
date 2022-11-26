@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Food;
 use Illuminate\Http\Request;
 
-class FoodController extends Controller
+class FoodController extends Controller                // der FoodController beinhaltet die gesamten Funktionen der Anwendung, sowie die Routen
 {
     /**
      * 

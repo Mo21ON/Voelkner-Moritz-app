@@ -13,3 +13,6 @@ class AjaxController extends Controller
         return Food::all()->count();             
     }
 }
+
+// in dem AjaxController wird die Funktion "counter" definiert, als rückgabewert erhalten wir die gesamte ANzahl von den Spalten.
+// Diese Funktion wird in der index.blade aufgerufen und dann dort ausgeführt.

@@ -3,6 +3,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <!--Einbinden von Jquery für das JavaScript, Funktion des Buttons usw. -->
+<!-- die index.blade stellt den gesamten Content der "Startseite dar. Hier werden ebenfalls Buttons erstellt, die zu den jeweiligen Unterseiten per "route" verlinken-->
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -29,7 +30,7 @@
     <table class="table table-bordered">
         <tr>
             <th>Reihenfolge</th>
-            <th>Name des Lebensmittel</th>
+            <th>Name des Lebensmittel</th>             <!-- HTML für die Spalten-->
             <th>Weitere Details</th>
             <th width="400px">Verwalten</th>
         </tr>
