@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="container">
-                @yield('content')
+                @yield('content')                       <!-- in der Yield Funktion ist die gesamte index Datei, welche den Content bestimmt. Diese wird in die layout geladen.-->
             </div>
 
             <div class="py-12">

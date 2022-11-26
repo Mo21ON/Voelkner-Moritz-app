@@ -11,6 +11,6 @@ class Food extends Model
 
     protected $fillable = [
         'name', 'detail', 'userID'                     //hier wird definiert welche Felder befüllt werden dürfen zur Erstellung des Models verwendet werden dürfen
-
+                                                    //protected heisst in diesem Falle das diese Feld nicht bearbeitet werden kann 
     ];
 }
