@@ -46,7 +46,7 @@ class FoodController extends Controller
         Food::create($request->all());
 
         return redirect()->route('foods.index')
-            ->with('success', 'Lebensmittel erfolgreich eingefügt!');
+            ->with('success', 'Lebensmittel erfolgreich abgelegt!');
     }
 
     /**

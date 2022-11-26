@@ -61,7 +61,7 @@
     </div>
 
     {{-- {!! $foods->links() !!} --}}
-
+    
    <script>
         $("#trigger-ajax").click(function() {
             $.ajax({
